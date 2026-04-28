@@ -30,42 +30,42 @@ html,body{width:100%;height:100%;
   scroll-snap-type:y mandatory;scroll-behavior:smooth;scrollbar-width:none}
 .stage::-webkit-scrollbar{display:none}
 section.slide{scroll-snap-align:start;scroll-snap-stop:always;
-  width:100%;min-height:100vh;display:grid;align-content:center;
-  justify-items:center;padding:72px clamp(40px,6vw,120px);
+  width:100%;height:100vh;max-height:100vh;display:grid;align-content:center;
+  justify-items:center;padding:clamp(20px,2.8vh,44px) clamp(32px,5vw,100px);
   position:relative;overflow:hidden;background:var(--bg)}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;
-  color:var(--text-muted);background:var(--bg-chip);padding:6px 14px;
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;
+  color:var(--text-muted);background:var(--bg-chip);padding:4px 11px;
   border-radius:999px;letter-spacing:.02em}
 .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
 h1.display{font-size:clamp(44px,5.8vw,88px);line-height:1.08;font-weight:800;letter-spacing:-.035em}
-h2.headline{font-size:clamp(24px,3.2vw,44px);line-height:1.16;font-weight:800;letter-spacing:-.03em;margin:14px 0 18px}
-p.lede{font-size:clamp(14px,1.2vw,17px);line-height:1.65;color:var(--text-active);max-width:36em}
+h2.headline{font-size:clamp(17px,2vw,30px);line-height:1.15;font-weight:800;letter-spacing:-.03em;margin:5px 0 8px}
+p.lede{font-size:clamp(11px,.9vw,13px);line-height:1.55;color:var(--text-active);max-width:36em}
 .text-white{color:var(--text-primary)!important}
 .text-white-60{color:var(--text-active)!important}
 .two-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:clamp(20px,3vw,48px);align-items:start;width:100%;max-width:1120px}
-.slide-inner{width:100%;max-width:1120px;display:grid;gap:20px}
-.kpi-grid{display:grid;gap:10px}
+.slide-inner{width:100%;max-width:1120px;display:grid;gap:10px}
+.kpi-grid{display:grid;gap:7px}
 .kpi-grid.cols4{grid-template-columns:repeat(4,1fr)}
 .kpi-grid.cols5{grid-template-columns:repeat(5,1fr)}
 .kpi-grid.cols6{grid-template-columns:repeat(6,1fr)}
 .kpi-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-l);
-  padding:16px;display:grid;gap:5px;box-shadow:var(--shadow-soft)}
-.kpi-card .accent-bar{width:36px;height:3px;border-radius:2px;margin-bottom:2px}
-.kpi-card .kpi-label{font-size:11px;color:var(--text-muted);font-weight:600}
-.kpi-card .kpi-val{font-size:clamp(18px,2.2vw,26px);font-weight:800;letter-spacing:-.03em;line-height:1.1}
-.kpi-card .kpi-sub{font-size:11px;font-weight:600}
+  padding:10px 12px;display:grid;gap:2px;box-shadow:var(--shadow-soft)}
+.kpi-card .accent-bar{width:28px;height:3px;border-radius:2px;margin-bottom:1px}
+.kpi-card .kpi-label{font-size:10px;color:var(--text-muted);font-weight:600}
+.kpi-card .kpi-val{font-size:clamp(14px,1.6vw,20px);font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.kpi-card .kpi-sub{font-size:10px;font-weight:600}
 .stat-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
 .stat-pill{background:#fff;border:1px solid var(--border);border-radius:var(--radius-l);
   padding:16px 24px;text-align:center;min-width:130px;box-shadow:var(--shadow-soft)}
 .stat-pill .sp-val{font-size:30px;font-weight:800;color:var(--text-primary);letter-spacing:-.04em;line-height:1}
 .stat-pill .sp-label{font-size:12px;color:var(--text-muted);margin-top:4px;font-weight:600}
 .tbl-wrap{width:100%;overflow-x:auto;border-radius:var(--radius-l);box-shadow:var(--shadow-soft)}
-table{width:100%;border-collapse:collapse;font-size:11px}
-table th{background:var(--accent);color:#fff;padding:9px 10px;text-align:center;
-  font-weight:700;white-space:nowrap;font-size:11px;line-height:1.4}
-table td{padding:7px 10px;border-bottom:1px solid var(--border);vertical-align:middle;
-  font-size:11px;color:var(--text-primary)}
+table{width:100%;border-collapse:collapse;font-size:10.5px}
+table th{background:var(--accent);color:#fff;padding:6px 8px;text-align:center;
+  font-weight:700;white-space:nowrap;font-size:10.5px;line-height:1.3}
+table td{padding:4px 8px;border-bottom:1px solid var(--border);vertical-align:middle;
+  font-size:10.5px;color:var(--text-primary)}
 table tr:nth-child(even) td{background:#F7F8FA}
 table tr:hover td{background:#EEF1FF}
 table td:first-child{font-weight:600;color:var(--text-strong)}
@@ -78,10 +78,10 @@ table .roi-row td{background:#E6F7EF!important;font-weight:700;color:#0C8A52}
 table .sub-row td{color:var(--text-muted);font-size:10px}
 table .sub-row td:first-child{padding-left:18px}
 .chart-box{background:#fff;border:1px solid var(--border);border-radius:var(--radius-l);
-  padding:18px;box-shadow:var(--shadow-soft)}
-.chart-title{font-size:12px;font-weight:700;color:var(--text-active);margin-bottom:10px}
+  padding:10px 12px;box-shadow:var(--shadow-soft)}
+.chart-title{font-size:11px;font-weight:700;color:var(--text-active);margin-bottom:6px}
 canvas{display:block;width:100%!important}
-.insight-box{border-radius:var(--radius-l);padding:14px 16px;display:grid;gap:7px;position:relative;overflow:hidden}
+.insight-box{border-radius:var(--radius-l);padding:8px 12px;display:grid;gap:4px;position:relative;overflow:hidden}
 .insight-box::before{content:'';position:absolute;left:0;top:0;width:4px;height:100%;border-radius:var(--radius-s) 0 0 var(--radius-s)}
 .insight-box.pos{background:#E6F7EF}.insight-box.pos::before{background:var(--success)}
 .insight-box.neg{background:#FEECEB}.insight-box.neg::before{background:var(--danger)}
@@ -92,8 +92,8 @@ canvas{display:block;width:100%!important}
 .insight-box.neg .ib-title{color:#B4251D}
 .insight-box.info .ib-title{color:var(--accent)}
 .insight-box.warn .ib-title{color:#92400E}
-.insight-box ul{list-style:none;padding-left:8px;display:grid;gap:4px}
-.insight-box ul li{font-size:11px;color:var(--text-active);padding-left:12px;position:relative;line-height:1.5}
+.insight-box ul{list-style:none;padding-left:8px;display:grid;gap:2px}
+.insight-box ul li{font-size:10px;color:var(--text-active);padding-left:12px;position:relative;line-height:1.45}
 .insight-box ul li::before{content:'›';position:absolute;left:0;font-weight:700}
 .insight-box.pos ul li::before{color:var(--success)}
 .insight-box.neg ul li::before{color:var(--danger)}
@@ -157,16 +157,16 @@ canvas{display:block;width:100%!important}
 .key-hint.hidden{opacity:0;pointer-events:none}
 .key-hint kbd{background:var(--bg-chip);border:1px solid var(--border);
   border-radius:3px;padding:2px 5px;font-family:inherit;font-size:10px;color:var(--text-active)}
-.toc-wrap{width:100%;max-width:780px;display:grid;gap:12px}
-.toc-item{display:flex;align-items:center;gap:18px;padding:18px 24px;
+.toc-wrap{width:100%;max-width:780px;display:grid;gap:7px}
+.toc-item{display:flex;align-items:center;gap:14px;padding:10px 18px;
   background:#fff;border:1px solid var(--border);border-radius:var(--radius-xl);
   box-shadow:var(--shadow-soft);cursor:pointer;transition:all .2s ease;text-decoration:none;color:inherit}
 .toc-item:hover{border-color:var(--accent);transform:translateX(4px)}
-.toc-num{font-size:24px;font-weight:800;letter-spacing:-.04em;color:var(--text-disabled);
-  width:40px;text-align:center;flex-shrink:0}
+.toc-num{font-size:20px;font-weight:800;letter-spacing:-.04em;color:var(--text-disabled);
+  width:32px;text-align:center;flex-shrink:0}
 .toc-text{flex:1}
-.toc-text h4{font-size:14px;font-weight:700;color:var(--text-primary);margin-bottom:3px}
-.toc-text p{font-size:12px;color:var(--text-muted)}
+.toc-text h4{font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:2px}
+.toc-text p{font-size:11px;color:var(--text-muted)}
 .toc-arrow{color:var(--text-disabled);font-size:16px;transition:transform .2s}
 .toc-item:hover .toc-arrow{transform:translateX(4px);color:var(--accent)}
 /* 이미지 플레이스홀더 */
@@ -186,7 +186,7 @@ canvas{display:block;width:100%!important}
 .clip-date-badge.green{background:#E6F7EF;color:#0C8A52}
 .clip-video{width:100%;border-radius:6px;background:#111;max-height:130px;object-fit:cover;display:block}
 .clip-portrait-box{display:flex;align-items:center;justify-content:center;min-height:60px}
-.clip-portrait-box video{height:200px;width:auto;border-radius:6px;display:block;background:#000}
+.clip-portrait-box video{height:155px;width:auto;border-radius:6px;display:block;background:#000}
 .clip-name{font-size:11px;font-weight:700;color:var(--text-primary);text-align:center;line-height:1.3}
 .clip-metrics{display:flex;flex-wrap:wrap;gap:3px;justify-content:center}
 .cm{font-size:9px;font-weight:700;padding:2px 6px;border-radius:999px}
@@ -236,7 +236,7 @@ canvas{display:block;width:100%!important}
     <div class="stat-row reveal d3">
       <div class="stat-pill"><div class="sp-val">8회</div><div class="sp-label">총 라이브 방송 (4월)</div></div>
       <div class="stat-pill"><div class="sp-val" style="color:#12B76A">+184%</div><div class="sp-label">YoY 실매출 성장</div></div>
-      <div class="stat-pill"><div class="sp-val" style="color:#7C9DFF">675%</div><div class="sp-label">최고 ROAS (4/23 네이버)</div></div>
+      <div class="stat-pill"><div class="sp-val" style="color:#7C9DFF">675%</div><div class="sp-label">최고 광고 ROAS (4/23 네이버)</div></div>
       <div class="stat-pill"><div class="sp-val">11.5억</div><div class="sp-label">4월 총 실매출</div></div>
     </div>
     <div class="cover-meta reveal d4">
@@ -257,14 +257,14 @@ canvas{display:block;width:100%!important}
       <h2 class="headline">목차</h2>
     </div>
     <div class="toc-wrap reveal d1">
-      <a class="toc-item" href="#s-naver" onclick="goToId('s-naver');return false">
+      <a class="toc-item" href="#s-official" onclick="goToId('s-official');return false">
         <div class="toc-num">01</div>
-        <div class="toc-text"><h4>네이버 라이브 성과 분석</h4><p>2026년 1~4월 · 6회 ROI &amp; ROAS 비교</p></div>
+        <div class="toc-text"><h4>공식몰 라이브 성과 분석</h4><p>2025.11 ~ 2026.04 · 5회 테마별 수익구조 및 ROI 비교</p></div>
         <div class="toc-arrow">&#x2192;</div>
       </a>
-      <a class="toc-item" href="#s-official" onclick="goToId('s-official');return false">
+      <a class="toc-item" href="#s-naver" onclick="goToId('s-naver');return false">
         <div class="toc-num">02</div>
-        <div class="toc-text"><h4>공식몰 라이브 성과 분석</h4><p>2025.11 ~ 2026.04 · 5회 테마별 수익구조 및 ROI 비교</p></div>
+        <div class="toc-text"><h4>네이버 라이브 성과 분석</h4><p>2026년 1~4월 · 6회 ROI &amp; 광고 ROAS 비교</p></div>
         <div class="toc-arrow">&#x2192;</div>
       </a>
       <a class="toc-item" href="#s-yoy" onclick="goToId('s-yoy');return false">
@@ -274,12 +274,12 @@ canvas{display:block;width:100%!important}
       </a>
       <a class="toc-item" href="#s-april" onclick="goToId('s-april');return false">
         <div class="toc-num">04</div>
-        <div class="toc-text"><h4>4월 라이브 효율 분석</h4><p>4월 4회 ROAS · 광고비 대비 효율 종합</p></div>
+        <div class="toc-text"><h4>4월 라이브 효율 분석</h4><p>4월 4회 광고 ROAS · 광고비 대비 효율 종합</p></div>
         <div class="toc-arrow">&#x2192;</div>
       </a>
       <a class="toc-item" href="#s-creative" onclick="goToId('s-creative');return false">
         <div class="toc-num">05</div>
-        <div class="toc-text"><h4>소재 &amp; 숏클립 성과</h4><p>소재 유형별 ROAS · 숏클립 3월 305% → 4월 1,098%</p></div>
+        <div class="toc-text"><h4>소재 &amp; 숏클립 성과</h4><p>소재 유형별 광고 ROAS · 숏클립 3월 305% → 4월 1,098%</p></div>
         <div class="toc-arrow">&#x2192;</div>
       </a>
       <a class="toc-item" href="#s-crm" onclick="goToId('s-crm');return false">
@@ -298,65 +298,46 @@ canvas{display:block;width:100%!important}
   <div class="slide-pg">02 / 10</div>
 </section>
 
-<!-- 03. 네이버 라이브 -->
-<section class="slide" id="s-naver" data-label="네이버 라이브">
-  <div class="slide-inner">
-    <div class="reveal" style="display:grid;gap:5px">
-      <span class="eyebrow"><span class="dot"></span>네이버 브랜드스토어 라이브 · 6회 분석</span>
-      <h2 class="headline">신학기 성수기(2월) 2회 부진 · 어린이날 성수기(4월) 2회 최고 — 성수기 시즌별 온도차 확인</h2>
-      <p class="lede">2026.01.15 ~ 2026.04.23 · 비수기 1회 / 신학기 성수기(2월) 2회 저조 · 어린이날 성수기(3·4월) 각 2회 집중 운영</p>
+<!-- 03. 4월 라이브 효율 -->
+<section class="slide bg-subtle" id="s-april" data-label="4월 라이브 효율">
+  <div class="slide-inner" style="gap:18px">
+    <div class="reveal" style="display:grid;gap:6px">
+      <span class="eyebrow"><span class="dot"></span>4월 라이브 4회 분석</span>
+      <h2 class="headline">4/15 플레이위크 1차 535%, 4/23 네이버 675%</h2>
     </div>
-    <div class="kpi-grid cols6 reveal d1">
-      <div class="kpi-card"><div class="accent-bar" style="background:#C8CED6"></div><div class="kpi-label">1월 15일 <span style="font-size:9px;background:#F1F3F6;color:#888;border-radius:4px;padding:1px 5px">비수기</span></div><div class="kpi-val" style="font-size:17px">ROI 111%</div><div class="kpi-sub" style="color:var(--text-muted)">직접이익 688만</div><div style="font-size:9px;color:var(--text-disabled);margin-top:2px">판매가 6,704만</div></div>
-      <div class="kpi-card" style="border-color:rgba(247,144,9,.4);background:#FFF8EC"><div class="accent-bar" style="background:#F79009"></div><div class="kpi-label">2월 5일 <span style="font-size:9px;background:#FFF3E0;color:#92400E;border-radius:4px;padding:1px 5px">성수기(신학기)</span></div><div class="kpi-val" style="font-size:17px;color:var(--danger)">ROI 103%</div><div class="kpi-sub" style="color:var(--danger)">직접이익 213만 ⚠️ 저조</div><div style="font-size:9px;color:var(--text-disabled);margin-top:2px">판매가 6,498만</div></div>
-      <div class="kpi-card" style="border-color:rgba(247,144,9,.4);background:#FFF8EC"><div class="accent-bar" style="background:#F79009"></div><div class="kpi-label">2월 24일 <span style="font-size:9px;background:#FFF3E0;color:#92400E;border-radius:4px;padding:1px 5px">성수기(신학기)</span></div><div class="kpi-val" style="font-size:17px;color:var(--warning)">ROI 125%</div><div class="kpi-sub" style="color:var(--warning)">직접이익 1,970만</div><div style="font-size:9px;color:var(--text-disabled);margin-top:2px">판매가 9,815만</div></div>
-      <div class="kpi-card" style="border-color:rgba(18,183,106,.5);background:#E6F7EF"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">3월 19일 &#x1F3C6; <span style="font-size:9px;background:#D1FAE5;color:#065F46;border-radius:4px;padding:1px 5px">성수기</span></div><div class="kpi-val" style="font-size:17px;color:#0C8A52">ROI 148%</div><div class="kpi-sub" style="color:#0C8A52">직접이익 3,126만</div><div style="font-size:9px;color:#0C8A52;margin-top:2px">판매가 9,570만</div></div>
-      <div class="kpi-card" style="border-color:rgba(61,90,254,.4);background:rgba(61,90,254,.04)"><div class="accent-bar" style="background:#3D5AFE"></div><div class="kpi-label">4월 8일 <span style="font-size:9px;background:#EEF1FF;color:#3D5AFE;border-radius:4px;padding:1px 5px">성수기</span></div><div class="kpi-val" style="font-size:17px;color:var(--accent)">ROI 133%</div><div class="kpi-sub" style="color:var(--accent)">직접이익 4,497만</div><div style="font-size:9px;color:var(--accent);margin-top:2px">판매가 17,963만</div></div>
-      <div class="kpi-card" style="border-color:rgba(18,183,106,.5);background:#E6F7EF"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">4월 23일 <span style="font-size:9px;background:#D1FAE5;color:#065F46;border-radius:4px;padding:1px 5px">성수기</span></div><div class="kpi-val" style="font-size:17px;color:var(--success)">ROI 144%</div><div class="kpi-sub" style="color:var(--success)">직접이익 5,437만</div><div style="font-size:9px;color:var(--success);margin-top:2px">판매가 17,708만</div></div>
+    <div class="kpi-grid cols4 reveal d1" style="gap:12px">
+      <div class="kpi-card" style="padding:20px 18px;gap:8px">
+        <div class="accent-bar" style="background:#12B76A;width:36px;height:4px"></div>
+        <div class="kpi-label" style="font-size:11px">4/8 · 네이버 1차</div>
+        <div class="kpi-val" style="font-size:28px">ROI 131%</div>
+        <div class="kpi-sub" style="color:#12B76A;font-size:11px">1,124만 → 5,674만</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:2px">광고 ROAS 505%</div>
+      </div>
+      <div class="kpi-card" style="padding:20px 18px;gap:8px;border-color:rgba(61,90,254,.5);background:rgba(61,90,254,.06)">
+        <div class="accent-bar" style="background:#7C9DFF;width:36px;height:4px"></div>
+        <div class="kpi-label" style="font-size:11px">4/15 · 플레이위크 1차 &#x1F3C6;</div>
+        <div class="kpi-val" style="color:#7C9DFF;font-size:28px">ROI 132%</div>
+        <div class="kpi-sub" style="color:#7C9DFF;font-size:11px">1,385만 → 1억 1,453만</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:2px">광고 ROAS 535%</div>
+      </div>
+      <div class="kpi-card" style="padding:20px 18px;gap:8px">
+        <div class="accent-bar" style="background:#F79009;width:36px;height:4px"></div>
+        <div class="kpi-label" style="font-size:11px">4/22 · 플레이위크 2차 샌들</div>
+        <div class="kpi-val" style="font-size:28px">ROI 139%</div>
+        <div class="kpi-sub" style="color:#F79009;font-size:11px">483만 → 4,589만</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:2px">광고 ROAS 250%</div>
+      </div>
+      <div class="kpi-card" style="padding:20px 18px;gap:8px;border-color:rgba(18,183,106,.4);background:rgba(18,183,106,.06)">
+        <div class="accent-bar" style="background:#12B76A;width:36px;height:4px"></div>
+        <div class="kpi-label" style="font-size:11px">4/23 · 네이버 2차</div>
+        <div class="kpi-val" style="color:#12B76A;font-size:28px">ROI 146%</div>
+        <div class="kpi-sub" style="color:#12B76A;font-size:11px">1,091만 → 7,367만</div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:2px">광고 ROAS 675%</div>
+      </div>
     </div>
-    <div class="reveal d2" style="display:grid;gap:12px;width:100%">
-      <div class="chart-box">
-        <div class="chart-title">ROI &amp; 직접이익 추이 (네이버 6회)</div>
-        <canvas id="chartNaverRoi" height="140"></canvas>
-        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-          <span style="font-size:10px;background:#F1F3F6;color:#888;border-radius:4px;padding:3px 8px;font-weight:600">■ 회색 = 비수기 (월 1회)</span>
-          <span style="font-size:10px;background:#FFF3E0;color:#92400E;border-radius:4px;padding:3px 8px;font-weight:600">■ 주황 = 성수기(신학기) — 2회 진행 저조</span>
-          <span style="font-size:10px;background:#EEF1FF;color:var(--accent);border-radius:4px;padding:3px 8px;font-weight:600">■ 파랑 = 성수기(어린이날) 1회차</span>
-          <span style="font-size:10px;background:#E6F7EF;color:#0C8A52;border-radius:4px;padding:3px 8px;font-weight:600">■ 초록 = 성수기(어린이날) 2회차</span>
-        </div>
-      </div>
-      <div style="display:grid;gap:10px">
-        <div class="tbl-wrap">
-          <table>
-            <thead><tr><th style="text-align:left">일자</th><th>테마</th><th>운영시기</th><th>판매가</th><th>직접이익</th><th>ROI</th><th>할인율</th><th>광고비</th></tr></thead>
-            <tbody>
-              <tr><td>1/15</td><td class="num" style="font-size:10px;color:var(--text-active)">신년 / NEW YEAR</td><td class="num" style="color:var(--text-muted)">비수기</td><td class="num">6,704만</td><td class="num pos">688만</td><td class="num">111%</td><td class="num warn">18%</td><td class="num">1,332만</td></tr>
-              <tr style="background:#FFF8EC"><td>2/5</td><td class="num" style="font-size:10px;color:var(--text-active)">설선물 / 저학년</td><td class="num" style="color:#92400E"><b>성수기(신학기)1회차</b></td><td class="num">6,498만</td><td class="num neg">213만 ⚠️</td><td class="num neg">103%</td><td class="num">16%</td><td class="num neg">1,663만</td></tr>
-              <tr style="background:#FFF8EC"><td>2/24</td><td class="num" style="font-size:10px;color:var(--text-active)">BACK TO SCHOOL 고학년</td><td class="num" style="color:#92400E"><b>성수기(신학기)2회차</b></td><td class="num">9,815만</td><td class="num warn">1,970만</td><td class="num warn">125%</td><td class="num pos">23%</td><td class="num">900만</td></tr>
-              <tr style="background:#E6F7EF"><td><b>3/19 &#x1F3C6;</b></td><td class="num" style="font-size:10px;color:#0C8A52"><b>피크닉룩</b></td><td class="num pos"><b>성수기 月1회</b></td><td class="num pos"><b>9,570만</b></td><td class="num pos"><b>3,126만</b></td><td class="num pos"><b>148%</b></td><td class="num warn"><b>18%</b></td><td class="num pos"><b>941만</b></td></tr>
-              <tr style="background:#EEF1FF"><td><b>4/8</b></td><td class="num" style="font-size:10px;color:var(--accent)"><b>액티브 키즈웨어 / 야외</b></td><td class="num" style="color:var(--accent)"><b>성수기 月1회차</b></td><td class="num" style="color:var(--accent)"><b>17,963만</b></td><td class="num pos"><b>4,497만</b></td><td class="num" style="color:var(--accent)"><b>133%</b></td><td class="num warn"><b>20%</b></td><td class="num" style="color:var(--accent)"><b>1,124만</b></td></tr>
-              <tr style="background:#E6F7EF"><td><b>4/23</b></td><td class="num" style="font-size:10px;color:#0C8A52"><b>어린이날 선물</b></td><td class="num pos"><b>성수기 月2회차</b></td><td class="num pos"><b>17,708만</b></td><td class="num pos"><b>5,437만</b></td><td class="num pos"><b>144%</b></td><td class="num warn"><b>18%</b></td><td class="num pos"><b>1,091만</b></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="insight-box pos">
-          <div class="ib-title">📊 데이터 종합 인사이트</div>
-          <ul>
-            <li>성수기 시즌 선별이 핵심 — 신학기 성수기(2월) 2회 직접이익 합산 2,183만 vs 어린이날 성수기(4월) 2회 합산 9,934만 (4.5배 차이)</li>
-            <li>할인율 18% 구간이 최적 — 1/15(ROI 111%) · 3/19(ROI 148%) · 4/23(ROI 144%) 일관된 우수 성과</li>
-            <li>광고비 절감 = ROI 상승 직결 — 3/19 광고비 941만(최소)에서 ROI 148%(최고) 달성</li>
-            <li>아웃도어·어린이날 테마 &gt; 신학기·명절 테마 — 피크닉·어린이날 테마 구간에서 판매가 급등</li>
-          </ul>
-        </div>
-        <div class="insight-box neg" style="margin-top:0">
-          <div class="ib-title">⚠️ 핵심 개선 포인트 → 전략 방향 근거</div>
-          <ul>
-            <li>신학기 성수기(2월) 2회 운영 → 기대 이하 성과 — 2/5 광고비 1,663만 대비 직접이익 213만, 시즌 온도차 명확</li>
-            <li>결론: 네이버는 어린이날 등 대형 성수기에만 월 2회 집중 / 신학기 등 소성수기는 1회 이하로 조정 필요</li>
-            <li>할인율 23%(2/24) 구간은 판매가 증대에는 유효하나 ROI 최적 구간(18%)보다 낮은 효율 확인</li>
-          </ul>
-        </div>
-      </div>
+    <div class="two-col reveal d2" style="gap:18px">
+      <div class="chart-box" style="padding:16px 18px"><div class="chart-title" style="font-size:12px;margin-bottom:10px">4월 라이브별 광고 ROAS 비교 (%)</div><canvas id="chartAprilRoas" height="180"></canvas></div>
+      <div class="chart-box" style="padding:16px 18px"><div class="chart-title" style="font-size:12px;margin-bottom:10px">광고비 대비 실매출 (억원)</div><canvas id="chartAprilCost" height="180"></canvas></div>
     </div>
   </div>
   <div class="slide-brand">MLB KIDS · 라이브방송 성과보고</div>
@@ -372,8 +353,8 @@ canvas{display:block;width:100%!important}
       <p class="lede">2025.11 ~ 2026.04 · 5회 자사몰 라이브 테마별 ROI 및 직접이익 분석</p>
     </div>
     <div class="two-col reveal d1" style="gap:14px">
-      <div class="chart-box"><div class="chart-title">ROI 비교 (%)</div><canvas id="chartRoi" height="180"></canvas></div>
-      <div class="chart-box"><div class="chart-title">직접이익 비교 (만원)</div><canvas id="chartProfit" height="180"></canvas></div>
+      <div class="chart-box"><div class="chart-title">ROI 비교 (%)</div><canvas id="chartRoi" height="110"></canvas></div>
+      <div class="chart-box"><div class="chart-title">직접이익 비교 (만원)</div><canvas id="chartProfit" height="110"></canvas></div>
     </div>
     <div class="tbl-wrap reveal d2">
       <table>
@@ -406,6 +387,54 @@ canvas{display:block;width:100%!important}
     </div>
   </div>
   <div class="slide-brand">MLB KIDS · 라이브방송 성과보고</div>
+  <div class="slide-pg">03 / 10</div>
+</section>
+
+<!-- 04. 네이버 라이브 -->
+<section class="slide" id="s-naver" data-label="네이버 라이브">
+  <div class="slide-inner">
+    <div class="reveal" style="display:grid;gap:5px">
+      <span class="eyebrow"><span class="dot"></span>네이버 브랜드스토어 라이브 · 6회 분석</span>
+      <h2 class="headline">성수기보다 온타임 — 2월 초 시즌 미도달, 4월 기온·수요 완벽 맞물림</h2>
+      <p class="lede">2026.01.15 ~ 2026.04.23 · 비수기 1회 / 신학기 성수기(2월) 2회 저조 · 어린이날 성수기(3·4월) 각 2회 집중 운영</p>
+    </div>
+    <div class="kpi-grid cols6 reveal d1">
+      <div class="kpi-card"><div class="accent-bar" style="background:#C8CED6"></div><div class="kpi-label">1월 15일 <span style="font-size:9px;background:#F1F3F6;color:#888;border-radius:4px;padding:1px 5px">비수기</span></div><div class="kpi-val" style="font-size:17px">ROI 111%</div><div class="kpi-sub" style="color:var(--text-muted)">직접이익 688만</div><div style="font-size:9px;color:var(--text-disabled);margin-top:2px">판매가 6,704만</div></div>
+      <div class="kpi-card" style="border-color:rgba(247,144,9,.4);background:#FFF8EC"><div class="accent-bar" style="background:#F79009"></div><div class="kpi-label">2월 5일 <span style="font-size:9px;background:#FFF3E0;color:#92400E;border-radius:4px;padding:1px 5px">성수기(신학기)</span></div><div class="kpi-val" style="font-size:17px;color:var(--danger)">ROI 103%</div><div class="kpi-sub" style="color:var(--danger)">직접이익 213만 ⚠️ 저조</div><div style="font-size:9px;color:var(--text-disabled);margin-top:2px">판매가 6,498만</div></div>
+      <div class="kpi-card" style="border-color:rgba(247,144,9,.4);background:#FFF8EC"><div class="accent-bar" style="background:#F79009"></div><div class="kpi-label">2월 24일 <span style="font-size:9px;background:#FFF3E0;color:#92400E;border-radius:4px;padding:1px 5px">성수기(신학기)</span></div><div class="kpi-val" style="font-size:17px;color:var(--warning)">ROI 125%</div><div class="kpi-sub" style="color:var(--warning)">직접이익 1,970만</div><div style="font-size:9px;color:var(--text-disabled);margin-top:2px">판매가 9,815만</div></div>
+      <div class="kpi-card" style="border-color:rgba(18,183,106,.5);background:#E6F7EF"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">3월 19일 &#x1F3C6; <span style="font-size:9px;background:#F1F3F6;color:#888;border-radius:4px;padding:1px 5px">비수기</span></div><div class="kpi-val" style="font-size:17px;color:#0C8A52">ROI 148%</div><div class="kpi-sub" style="color:#0C8A52">직접이익 3,126만</div><div style="font-size:9px;color:#0C8A52;margin-top:2px">판매가 9,570만</div></div>
+      <div class="kpi-card" style="border-color:rgba(61,90,254,.4);background:rgba(61,90,254,.04)"><div class="accent-bar" style="background:#3D5AFE"></div><div class="kpi-label">4월 8일 <span style="font-size:9px;background:#EEF1FF;color:#3D5AFE;border-radius:4px;padding:1px 5px">성수기</span></div><div class="kpi-val" style="font-size:17px;color:var(--accent)">ROI 133%</div><div class="kpi-sub" style="color:var(--accent)">직접이익 4,497만</div><div style="font-size:9px;color:var(--accent);margin-top:2px">판매가 17,963만</div></div>
+      <div class="kpi-card" style="border-color:rgba(18,183,106,.5);background:#E6F7EF"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">4월 23일 <span style="font-size:9px;background:#D1FAE5;color:#065F46;border-radius:4px;padding:1px 5px">성수기</span></div><div class="kpi-val" style="font-size:17px;color:var(--success)">ROI 144%</div><div class="kpi-sub" style="color:var(--success)">직접이익 5,437만</div><div style="font-size:9px;color:var(--success);margin-top:2px">판매가 17,708만</div></div>
+    </div>
+    <div class="reveal d2" style="display:grid;gap:12px;width:100%">
+      <div class="chart-box">
+        <div class="chart-title">ROI &amp; 직접이익 추이 (네이버 6회)</div>
+        <canvas id="chartNaverRoi" height="160"></canvas>
+        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+          <span style="font-size:10px;background:#F1F3F6;color:#888;border-radius:4px;padding:3px 8px;font-weight:600">■ 회색 = 비수기 (1/15, 3/19)</span>
+          <span style="font-size:10px;background:#FFF3E0;color:#92400E;border-radius:4px;padding:3px 8px;font-weight:600">■ 주황 = 성수기(신학기) — 온타임 미달</span>
+          <span style="font-size:10px;background:#EEF1FF;color:var(--accent);border-radius:4px;padding:3px 8px;font-weight:600">■ 파랑 = 성수기(어린이날) 1회차</span>
+          <span style="font-size:10px;background:#E6F7EF;color:#0C8A52;border-radius:4px;padding:3px 8px;font-weight:600">■ 초록 = 성수기(어린이날) 2회차</span>
+        </div>
+      </div>
+      <div style="display:grid;gap:10px">
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th style="text-align:left">일자</th><th>테마</th><th>운영시기</th><th>판매가</th><th>직접이익</th><th>ROI</th><th>할인율</th><th>광고비</th></tr></thead>
+            <tbody>
+              <tr><td>1/15</td><td class="num" style="font-size:10px;color:var(--text-active)">신년 / NEW YEAR</td><td class="num" style="color:var(--text-muted)">비수기</td><td class="num">6,704만</td><td class="num pos">688만</td><td class="num">111%</td><td class="num warn">18%</td><td class="num">1,332만</td></tr>
+              <tr style="background:#FFF8EC"><td>2/5</td><td class="num" style="font-size:10px;color:var(--text-active)">설선물 / 저학년</td><td class="num" style="color:#92400E"><b>성수기(신학기)1회차</b></td><td class="num">6,498만</td><td class="num neg">213만 ⚠️</td><td class="num neg">103%</td><td class="num">16%</td><td class="num neg">1,663만</td></tr>
+              <tr style="background:#FFF8EC"><td>2/24</td><td class="num" style="font-size:10px;color:var(--text-active)">BACK TO SCHOOL 고학년</td><td class="num" style="color:#92400E"><b>성수기(신학기)2회차</b></td><td class="num">9,815만</td><td class="num warn">1,970만</td><td class="num warn">125%</td><td class="num pos">23%</td><td class="num">900만</td></tr>
+              <tr style="background:#E6F7EF"><td><b>3/19 &#x1F3C6;</b></td><td class="num" style="font-size:10px;color:#0C8A52"><b>피크닉룩</b></td><td class="num" style="color:var(--text-muted)"><b>비수기</b></td><td class="num pos"><b>9,570만</b></td><td class="num pos"><b>3,126만</b></td><td class="num pos"><b>148%</b></td><td class="num warn"><b>18%</b></td><td class="num pos"><b>941만</b></td></tr>
+              <tr style="background:#EEF1FF"><td><b>4/8</b></td><td class="num" style="font-size:10px;color:var(--accent)"><b>액티브 키즈웨어 / 야외</b></td><td class="num" style="color:var(--accent)"><b>성수기 月1회차</b></td><td class="num" style="color:var(--accent)"><b>17,963만</b></td><td class="num pos"><b>4,497만</b></td><td class="num" style="color:var(--accent)"><b>133%</b></td><td class="num warn"><b>20%</b></td><td class="num" style="color:var(--accent)"><b>1,124만</b></td></tr>
+              <tr style="background:#E6F7EF"><td><b>4/23</b></td><td class="num" style="font-size:10px;color:#0C8A52"><b>어린이날 선물</b></td><td class="num pos"><b>성수기 月2회차</b></td><td class="num pos"><b>17,708만</b></td><td class="num pos"><b>5,437만</b></td><td class="num pos"><b>144%</b></td><td class="num warn"><b>18%</b></td><td class="num pos"><b>1,091만</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-brand">MLB KIDS · 라이브방송 성과보고</div>
   <div class="slide-pg">04 / 10</div>
 </section>
 
@@ -413,37 +442,113 @@ canvas{display:block;width:100%!important}
 <section class="slide" id="s-yoy" data-label="YoY 비교">
   <div class="slide-inner">
     <div class="reveal" style="display:grid;gap:5px">
-      <span class="eyebrow"><span class="dot"></span>YoY 성과 비교 · 4/1~23 기준</span>
-      <h2 class="headline">광고비 +57% 대비 실매출 +184% 효율적 성장 달성</h2>
+      <span class="eyebrow"><span class="dot"></span>YoY 채널별 성과 비교 · 4/1~27 기준 (공식몰+브랜드스토어)</span>
+      <h2 class="headline">예산 부스팅 × 차등 경품 설계 — 공식몰 광고 ROAS +307%p · 실매출 +108% YoY</h2>
     </div>
     <div class="kpi-grid cols4 reveal d1">
-      <div class="kpi-card"><div class="accent-bar" style="background:#888D96"></div><div class="kpi-label">총 광고비 YoY</div><div class="kpi-val" style="color:var(--warning)">+57%</div><div class="kpi-sub" style="color:var(--warning)">10.45억 → 16.44억</div></div>
-      <div class="kpi-card"><div class="accent-bar" style="background:var(--success)"></div><div class="kpi-label">총 구매매출 YoY</div><div class="kpi-val" style="color:var(--success)">+182%</div><div class="kpi-sub" style="color:var(--success)">3.64억 → 10.28억</div></div>
-      <div class="kpi-card"><div class="accent-bar" style="background:var(--accent)"></div><div class="kpi-label">총 ROAS YoY</div><div class="kpi-val" style="color:var(--accent)">+277%p</div><div class="kpi-sub" style="color:var(--accent)">348% → 625%</div></div>
-      <div class="kpi-card"><div class="accent-bar" style="background:var(--success)"></div><div class="kpi-label">총 실매출 YoY</div><div class="kpi-val" style="color:var(--success)">+184%</div><div class="kpi-sub" style="color:var(--success)">4.05억 → 11.50억</div></div>
+      <div class="kpi-card"><div class="accent-bar" style="background:#F79009"></div><div class="kpi-label">4월 총 광고비</div><div class="kpi-val" style="color:var(--warning)">2억 229만</div><div class="kpi-sub" style="color:var(--warning)">이관 전 1억 8,905만 + 5월 이관 1,250만 ↑</div></div>
+      <div class="kpi-card"><div class="accent-bar" style="background:var(--accent)"></div><div class="kpi-label">공식몰 광고 ROAS YoY</div><div class="kpi-val" style="color:var(--accent)">+307%p</div><div class="kpi-sub" style="color:var(--accent)">392% → 699%</div></div>
+      <div class="kpi-card"><div class="accent-bar" style="background:var(--success)"></div><div class="kpi-label">공식몰 실매출 YoY</div><div class="kpi-val" style="color:var(--success)">+107.6%</div><div class="kpi-sub" style="color:var(--success)">29.8억 → 61.9억</div></div>
+      <div class="kpi-card"><div class="accent-bar" style="background:var(--success)"></div><div class="kpi-label">전체 실매출 YoY</div><div class="kpi-val" style="color:var(--success)">+59.6%</div><div class="kpi-sub" style="color:var(--success)">87.4억 → 139.5억</div></div>
     </div>
-    <div class="two-col reveal d2">
-      <div class="chart-box"><div class="chart-title">채널별 실매출 YoY 비교 (억원)</div><canvas id="chartYoy" height="220"></canvas></div>
-      <div style="display:grid;gap:10px">
+    <div class="two-col reveal d2" style="align-items:stretch">
+      <!-- 좌: 예산 배분 + 채널 차트 -->
+      <div style="display:grid;gap:7px;grid-template-rows:auto 1fr;align-self:stretch">
+        <div class="chart-box" style="padding:8px 12px;display:grid;gap:6px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <div class="chart-title">4월 광고 예산 배분</div>
+            <div style="font-size:9px;color:var(--text-muted)">Total 2억 229만원</div>
+          </div>
+
+          <!-- 소재 유형별 -->
+          <div>
+            <div style="font-size:9px;color:var(--text-muted);margin-bottom:3px">① 소재 유형별</div>
+            <div style="display:flex;height:18px;border-radius:4px;overflow:hidden;gap:1px">
+              <div style="width:78.2%;background:#3D5AFE;display:flex;align-items:center;padding:0 7px;color:#fff;font-size:8px;font-weight:700">상시 78.2% · 1억 5,819만</div>
+              <div style="width:21.8%;background:#12B76A;display:flex;align-items:center;padding:0 5px;color:#fff;font-size:8px;font-weight:700">라방+PW 21.8% · 4,411만</div>
+            </div>
+          </div>
+
+          <!-- 기간별 -->
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:3px">
+              <div style="font-size:9px;color:var(--text-muted)">② 기간별 (플레이위크 전/후)</div>
+              <div style="font-size:8px;font-weight:700;color:#F79009">▶ PW 구간 예산 65.6% 집중</div>
+            </div>
+            <div style="display:flex;height:18px;border-radius:4px;overflow:hidden;gap:1px">
+              <div style="width:34.4%;background:#C8CED6;display:flex;align-items:center;padding:0 7px;color:#555;font-size:8px;font-weight:600">4/1~14 · 6,957만 (34.4%)</div>
+              <div style="width:65.6%;background:#F79009;display:flex;align-items:center;padding:0 7px;color:#fff;font-size:8px;font-weight:700">4/15~30 · 1억 3,272만 (65.6%) ↑↑</div>
+            </div>
+            <div style="display:flex;gap:4px;margin-top:3px">
+              <div style="flex:1;padding:4px 7px;background:#F7F8FA;border-radius:4px;border:1px solid #E4E7EB;font-size:8px;color:#888">
+                <span style="font-weight:700;color:#555">PW 전 상시</span><br>6,957만
+              </div>
+              <div style="display:flex;align-items:center;font-size:10px;color:#C8CED6">→</div>
+              <div style="flex:2;padding:4px 7px;background:#FFF3E0;border-radius:4px;border:1px solid rgba(247,144,9,.3);font-size:8px;color:#92400E">
+                <span style="font-weight:700;color:#F79009">PW 집중 + 5월 이관 1,250만 부스팅</span><br>1억 3,272만 (1.9배 ↑)
+              </div>
+            </div>
+          </div>
+
+          <!-- 5월 이관 강조 박스 -->
+          <div style="display:flex;align-items:center;gap:8px;padding:5px 9px;background:rgba(61,90,254,.07);border-radius:5px;border:1px dashed rgba(61,90,254,.35)">
+            <span style="font-size:16px;flex-shrink:0">💡</span>
+            <div>
+              <div style="font-size:9px;font-weight:700;color:#3D5AFE">5월 예산 1,250만원 → 4월 이관 집행</div>
+              <div style="font-size:8.5px;color:var(--text-muted);margin-top:1px">라방 4회 + 플레이위크 상시 성과 우수 확인 → 적극 예산 부스팅</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-box" style="flex:1;display:flex;flex-direction:column;justify-content:center"><div class="chart-title">채널별 실매출 YoY 비교 (억원)</div><canvas id="chartYoy" height="230"></canvas></div>
+      </div>
+
+      <!-- 우: YOY 테이블 + 인사이트 -->
+      <div style="display:grid;gap:7px">
         <div class="tbl-wrap">
           <table>
-            <thead><tr><th>채널</th><th>구분</th><th>ROAS</th><th>실매출</th></tr></thead>
+            <thead><tr><th>채널</th><th>구분</th><th>광고비</th><th>광고 ROAS</th><th>실매출</th><th>CVR</th></tr></thead>
             <tbody>
-              <tr><td rowspan="3" style="font-weight:700">공식몰</td><td>25년</td><td class="num">368%</td><td class="num">2.35억</td></tr>
-              <tr><td><b>26년</b></td><td class="num pos"><b>711%</b></td><td class="num pos"><b>5.04억</b></td></tr>
-              <tr><td class="pos">YoY</td><td class="num pos">+343%p</td><td class="num pos">+114%</td></tr>
-              <tr><td rowspan="3" style="font-weight:700">네이버</td><td>25년</td><td class="num">305%</td><td class="num">1.70억</td></tr>
-              <tr><td><b>26년</b></td><td class="num pos"><b>493%</b></td><td class="num pos"><b>6.46억</b></td></tr>
-              <tr><td class="pos">YoY</td><td class="num pos">+188%p</td><td class="num pos">+280%</td></tr>
+              <tr><td rowspan="3" style="font-weight:700">공식몰</td><td>25년</td><td class="num">8,328만</td><td class="num">392%</td><td class="num">29.8억</td><td class="num">0.67%</td></tr>
+              <tr><td><b>26년</b></td><td class="num pos"><b>1억 2,396만</b></td><td class="num pos"><b>699%</b></td><td class="num pos"><b>61.9억</b></td><td class="num pos"><b>1.50%</b></td></tr>
+              <tr><td class="pos">YoY</td><td class="num pos">+48.9%</td><td class="num pos"><b>+307%p</b></td><td class="num pos"><b>+107.6%</b></td><td class="num pos">+0.83%p</td></tr>
+              <tr><td rowspan="3" style="font-weight:700">브랜드스토어</td><td>25년</td><td class="num">5,013만</td><td class="num">438%</td><td class="num">57.6억</td><td class="num">3.39%</td></tr>
+              <tr><td><b>26년</b></td><td class="num pos"><b>7,245만</b></td><td class="num pos"><b>492%</b></td><td class="num pos"><b>77.6억</b></td><td class="num pos"><b>4.00%</b></td></tr>
+              <tr><td class="pos">YoY</td><td class="num pos">+44.5%</td><td class="num pos">+54%p</td><td class="num pos">+34.8%</td><td class="num pos">+0.61%p</td></tr>
             </tbody>
           </table>
         </div>
+
+        <!-- 전년 vs 올해 플레이위크 비교 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <div style="background:#FEECEB;border:1px solid rgba(240,68,56,.25);border-radius:8px;padding:8px 10px">
+            <div style="font-size:10px;font-weight:700;color:#B4251D;margin-bottom:5px">⚠️ 전년 어린이날 기획전</div>
+            <div style="display:grid;gap:3px;font-size:9px;color:#7A2020;line-height:1.7">
+              <div>경품 증정 프로모션 <b>있음</b></div>
+              <div style="color:#F04438;font-weight:700">✗ 금액대별 차등 없음</div>
+              <div>→ 구매 유도 동기 약화</div>
+              <div>→ 전환·매출 저조</div>
+              <div style="margin-top:3px;padding:3px 6px;background:rgba(240,68,56,.1);border-radius:4px;font-weight:700">CVR 0.67% · 광고 ROAS 392%</div>
+            </div>
+          </div>
+          <div style="background:#E6F7EF;border:1px solid rgba(18,183,106,.3);border-radius:8px;padding:8px 10px">
+            <div style="font-size:10px;font-weight:700;color:#0C8A52;margin-bottom:5px">✅ 올해 플레이위크</div>
+            <div style="display:grid;gap:3px;font-size:9px;color:#065F46;line-height:1.7">
+              <div style="color:#12B76A;font-weight:700">✓ 구매 금액대별 차등 경품</div>
+              <div>→ 높은 금액대 구매 유도</div>
+              <div style="color:#12B76A;font-weight:700">✓ 히어로상품: 트랙러너 제로</div>
+              <div>→ 명확한 전환 앵커 제공</div>
+              <div style="margin-top:3px;padding:3px 6px;background:rgba(18,183,106,.15);border-radius:4px;font-weight:700">CVR 1.50% · 광고 ROAS 699%</div>
+            </div>
+          </div>
+        </div>
+
         <div class="insight-box pos">
-          <div class="ib-title">Key Insight</div>
+          <div class="ib-title">✅ 성과 우수 3가지 요인</div>
           <ul>
-            <li>광고비 57% 증가 대비 실매출 184% 성장 → 효율 3배 이상</li>
-            <li>네이버 실매출 +280%로 가장 높은 성장률</li>
-            <li>공식몰 ROAS 711%로 전년의 약 2배 달성</li>
+            <li><b>차등 경품 설계</b> — 금액대별 구매 유도 → AOV +15% · CVR +0.83%p 달성</li>
+            <li><b>트랙러너 제로 히어로상품</b> — 구매 동기 명확화, 전환 앵커 역할</li>
+            <li><b>예산 집중 전략</b> — PW 구간 65.6% + 5월 이관 1,250만으로 노출 극대화</li>
           </ul>
         </div>
       </div>
@@ -453,28 +558,6 @@ canvas{display:block;width:100%!important}
   <div class="slide-pg">05 / 10</div>
 </section>
 
-<!-- 06. 4월 라이브 효율 -->
-<section class="slide bg-subtle" id="s-april" data-label="4월 라이브 효율">
-  <div class="slide-inner">
-    <div class="reveal" style="display:grid;gap:5px">
-      <span class="eyebrow"><span class="dot"></span>4월 라이브 4회 분석</span>
-      <h2 class="headline">인플루언서 없이 역대 최고 달성<br>4/15 플레이위크 1차 535%, 4/23 네이버 675%</h2>
-    </div>
-    <div class="kpi-grid cols4 reveal d1">
-      <div class="kpi-card"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">4/8 · 네이버 1차</div><div class="kpi-val">ROAS 505%</div><div class="kpi-sub" style="color:#12B76A">1,124만 → 5,674만 / ROI 131%</div></div>
-      <div class="kpi-card" style="border-color:rgba(61,90,254,.5);background:rgba(61,90,254,.06)"><div class="accent-bar" style="background:#7C9DFF"></div><div class="kpi-label">4/15 · 플레이위크 1차 &#x1F3C6;</div><div class="kpi-val" style="color:#7C9DFF">광고 ROAS 535%</div><div class="kpi-sub" style="color:#7C9DFF">1,385만 → 1억 1,453만 / ROI 132%</div></div>
-      <div class="kpi-card"><div class="accent-bar" style="background:#F79009"></div><div class="kpi-label">4/22 · 플레이위크 2차 샌들</div><div class="kpi-val">광고 ROAS 250%</div><div class="kpi-sub" style="color:#F79009">483만 → 4,589만 / ROI 139%</div></div>
-      <div class="kpi-card" style="border-color:rgba(18,183,106,.4);background:rgba(18,183,106,.06)"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">4/23 · 네이버 2차</div><div class="kpi-val" style="color:#12B76A">ROAS 675%</div><div class="kpi-sub" style="color:#12B76A">1,091만 → 7,367만 / ROI 146%</div></div>
-    </div>
-    <div class="two-col reveal d2">
-      <div class="chart-box"><div class="chart-title">4월 라이브별 ROAS 비교 (%)</div><canvas id="chartAprilRoas" height="200"></canvas></div>
-      <div class="chart-box"><div class="chart-title">광고비 대비 실매출 (억원)</div><canvas id="chartAprilCost" height="200"></canvas></div>
-    </div>
-  </div>
-  <div class="slide-brand">MLB KIDS · 라이브방송 성과보고</div>
-  <div class="slide-pg">06 / 10</div>
-</section>
-
 <!-- 07. 역대 라방 비교 -->
 <section class="slide bg-subtle" id="s-history" data-label="역대 라방 비교">
   <div class="slide-inner">
@@ -482,37 +565,49 @@ canvas{display:block;width:100%!important}
       <span class="eyebrow"><span class="dot"></span>공식몰 역대 라방 비교</span>
       <h2 class="headline">인플루언서보다 시즌 경품 + 프로모션 연계가 결정적</h2>
     </div>
-    <div class="two-col reveal d1">
-      <div class="chart-box">
-        <div class="chart-title">라방별 ROAS 비교 (%) · 주황=인플루언서 출연, 파랑=없음</div>
-        <canvas id="chartHistory" height="260"></canvas>
+    <div class="two-col reveal d1" style="align-items:stretch">
+      <div class="chart-box" style="display:grid;gap:6px;align-self:stretch">
+        <div class="chart-title">공식몰 라방별 광고 ROAS</div>
+        <canvas id="chartHistoryRoas" height="130"></canvas>
+        <div style="border-top:1px solid rgba(0,0,0,.07);padding-top:4px">
+          <div class="chart-title" style="margin-bottom:3px">네이버 MLBKIDS 키워드 검색량 × 공식몰 라방 일자 (2025.11~2026.04)</div>
+          <canvas id="chartHistory" height="210"></canvas>
+          <!-- 마커 범례 -->
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:1px">
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="display:inline-block;width:10px;height:2px;background:#F79009;border-radius:1px"></span>인플 라방</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="display:inline-block;width:10px;height:2px;background:#12B76A;border-radius:1px"></span>플레이위크 1차 🏆</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="display:inline-block;width:10px;height:2px;background:#3D5AFE;border-radius:1px"></span>플레이위크 2차</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="display:inline-block;width:10px;height:2px;background:#C8CED6;border-radius:1px"></span>토들러</span>
+            <span style="font-size:9px;color:var(--text-muted)">▲ 11/18 첫 영하 = 자연수요 100 (프로모 없음)</span>
+          </div>
+        </div>
       </div>
-      <div style="display:grid;gap:12px">
+      <div style="display:grid;gap:8px">
         <div class="tbl-wrap">
           <table>
-            <thead><tr><th>라방 테마</th><th>인플</th><th>광고비</th><th>광고 ROAS</th><th>실매출</th><th>ROI</th></tr></thead>
+            <thead><tr><th>라방 테마</th><th>인플</th><th>광고비</th><th>광고 ROAS</th><th>실매출</th><th>키워드 당일</th><th>ROI</th></tr></thead>
             <tbody>
-              <tr><td>해리포터 인플 (25.11)</td><td class="num">&#x2705;</td><td class="num">2,362만</td><td class="num warn">220%</td><td class="num">1억 1,850만</td><td class="num">108%</td></tr>
-              <tr><td>소이조이 인플 (26.1)</td><td class="num">&#x2705;</td><td class="num">1,867만</td><td class="num neg">91%</td><td class="num">5,522만</td><td class="num">102%</td></tr>
-              <tr><td>토들러 (26.3)</td><td class="num">&#x274C;</td><td class="num">632만</td><td class="num neg">91%</td><td class="num">2,615만</td><td class="num">128%</td></tr>
-              <tr style="background:#E6F7EF"><td><b>플레이위크 1차 어린이날 (26.4)</b></td><td class="num">&#x274C;</td><td class="num pos"><b>1,385만</b></td><td class="num pos"><b>535% &#x1F3C6;</b></td><td class="num pos"><b>1억 1,453만</b></td><td class="num pos"><b>132%</b></td></tr>
-              <tr><td>플레이위크 2차 샌들 런칭 (26.4)</td><td class="num">&#x274C;</td><td class="num">483만</td><td class="num pos">250%</td><td class="num">4,589만</td><td class="num">139%</td></tr>
+              <tr><td>해리포터 인플 (25.11)</td><td class="num">&#x2705;</td><td class="num">2,362만</td><td class="num warn">220%</td><td class="num">1억 1,850만</td><td class="num warn">66.4 <span style="font-size:9px">(+43%)</span></td><td class="num">108%</td></tr>
+              <tr><td>소이조이 인플 (26.1)</td><td class="num">&#x2705;</td><td class="num">1,867만</td><td class="num neg">91%</td><td class="num">5,522만</td><td class="num neg">33.8 <span style="font-size:9px">(+35%)</span></td><td class="num">102%</td></tr>
+              <tr><td>토들러 (26.3)</td><td class="num">&#x274C;</td><td class="num">632만</td><td class="num neg">91%</td><td class="num">2,615만</td><td class="num" style="color:var(--text-muted)">46.0 <span style="font-size:9px">(+2%)</span></td><td class="num">128%</td></tr>
+              <tr style="background:#E6F7EF"><td><b>플레이위크 1차 어린이날 (26.4)</b></td><td class="num">&#x274C;</td><td class="num pos"><b>1,385만</b></td><td class="num pos"><b>535% &#x1F3C6;</b></td><td class="num pos"><b>1억 1,453만</b></td><td class="num pos"><b>85.6 <span style="font-size:9px">(+69%)</span></b></td><td class="num pos"><b>132%</b></td></tr>
+              <tr><td>플레이위크 2차 샌들 런칭 (26.4)</td><td class="num">&#x274C;</td><td class="num">483만</td><td class="num pos">250%</td><td class="num">4,589만</td><td class="num" style="color:var(--text-muted)">56.9 <span style="font-size:9px">(-10%)</span></td><td class="num">139%</td></tr>
             </tbody>
           </table>
         </div>
         <div class="insight-box pos">
-          <div class="ib-title">Positive Signal</div>
+          <div class="ib-title">✅ 시즌 × 기획전 = 검색·전환 동시 폭발</div>
           <ul>
-            <li>인플루언서 없이 광고 ROAS 535% — 비용 효율 역대 최고</li>
-            <li>소규모 집행(483만)도 광고 ROAS 250% — 스케일 유연성 확보</li>
-            <li>프로모션 연계가 인플루언서 효과를 초과</li>
+            <li>플레이위크 1차 (4/15) 키워드 +69%·광고 ROAS 535% — 어린이날 시즌 + 경품 기획전 시너지</li>
+            <li>인플루언서 없이 달성 — 프로모션 설계가 인플보다 결정적</li>
+            <li>소규모 집행(483만)도 광고 ROAS 250% — 시즌만 맞으면 스케일 무관</li>
           </ul>
         </div>
         <div class="insight-box neg">
-          <div class="ib-title">Watch Point</div>
+          <div class="ib-title">⚠️ 인플루언서 효과의 한계</div>
           <ul>
-            <li>인플루언서 출연 광고 ROAS 91~220% — ROI 재검토 필요</li>
-            <li>트래픽 유발 목적으로만 선발적 활용 고려</li>
+            <li>인플 라방 검색량 반짝 +43%/+35% → 광고 ROAS는 220%·91%로 저조 — 트래픽 유발에도 전환 연결 미흡</li>
+            <li>11/18 첫 영하에 검색 100(전체 최고) — 프로모 없이도 계절 수요 폭발 → 시즌 타이밍이 인플보다 강함</li>
           </ul>
         </div>
       </div>
@@ -529,11 +624,18 @@ canvas{display:block;width:100%!important}
       <span class="eyebrow"><span class="dot"></span>소재 &amp; 숏클립 성과 · 4/15~22</span>
       <h2 class="headline">자막 적용 후 숏클립 CTR 15배↑ — 광고비 소진 · 전환 · 원데이 기획전 효과 동시 달성</h2>
     </div>
+    <!-- KPI 카드: 자막❌ 시기(상시>숏클립) → 자막✅ 이후(숏클립 역전) 스토리 -->
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px" class="reveal d1">
+      <span style="font-size:10px;font-weight:700;color:var(--text-muted);white-space:nowrap">자막❌ 운영 시기</span>
+      <span style="flex:1;height:1px;background:rgba(0,0,0,.1)"></span>
+      <span style="font-size:10px;font-weight:700;color:#0C8A52;white-space:nowrap">자막✅ 도입 이후</span>
+      <span style="flex:1;height:1px;background:rgba(18,183,106,.3)"></span>
+    </div>
     <div class="kpi-grid cols4 reveal d1">
-      <div class="kpi-card"><div class="accent-bar" style="background:#8D9096"></div><div class="kpi-label">상시 소재</div><div class="kpi-val">671%</div><div class="kpi-sub" style="color:#8D9096">최우수 606%</div></div>
-      <div class="kpi-card"><div class="accent-bar" style="background:#3D5AFE"></div><div class="kpi-label">라방 소재</div><div class="kpi-val" style="color:#7C9DFF">982%</div><div class="kpi-sub" style="color:#7C9DFF">최우수 1,851%</div></div>
-      <div class="kpi-card"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">플레이위크 KV</div><div class="kpi-val" style="color:#12B76A">1,078%</div><div class="kpi-sub" style="color:#12B76A">최우수 1,689%</div></div>
-      <div class="kpi-card" style="border-color:rgba(18,183,106,.4);background:rgba(18,183,106,.06)"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">숏클립 (4월, 자막 있음)</div><div class="kpi-val" style="color:#12B76A">1,098%</div><div class="kpi-sub" style="color:#12B76A">3월 305% → +793%p &#x2191;</div></div>
+      <div class="kpi-card"><div class="accent-bar" style="background:#8D9096"></div><div class="kpi-label">상시 배너 CTR</div><div class="kpi-val">2.64%</div><div class="kpi-sub" style="color:var(--text-muted)">소이조이·토들러 기간 평균</div></div>
+      <div class="kpi-card" style="border-color:rgba(248,113,113,.35)"><div class="accent-bar" style="background:#F87171"></div><div class="kpi-label">숏클립 CTR <span style="font-size:9px">자막❌</span></div><div class="kpi-val" style="color:#EF4444">1.74%</div><div class="kpi-sub" style="color:#EF4444">배너 대비 열세 ↓</div></div>
+      <div class="kpi-card"><div class="accent-bar" style="background:#8D9096"></div><div class="kpi-label">상시 배너 CTR</div><div class="kpi-val">4.85%</div><div class="kpi-sub" style="color:var(--text-muted)">플레이위크 기간 평균</div></div>
+      <div class="kpi-card" style="border-color:rgba(18,183,106,.4);background:rgba(18,183,106,.06)"><div class="accent-bar" style="background:#12B76A"></div><div class="kpi-label">숏클립 CTR <span style="font-size:9px">자막✅</span></div><div class="kpi-val" style="color:#12B76A">8.35%</div><div class="kpi-sub" style="color:#12B76A">배너 대비 +3.5%p 역전 &#x2191;</div></div>
     </div>
     <!-- 메인: 좌(세로형 숏클립 2×2) / 우(성과분석) -->
     <div class="reveal d2" style="display:grid;grid-template-columns:max-content 1fr;gap:14px;align-items:start;margin-top:4px">
@@ -611,7 +713,7 @@ canvas{display:block;width:100%!important}
               CTR↑ → 알고리즘 적극 배포<br>
               광고비 정상 소진<br>
               (플레이위크 1차 764,620원)<br>
-              전환 확보 · ROAS 808~2,688%
+              전환 확보 · 광고 ROAS 808~2,688%
             </div>
           </div>
         </div>
@@ -624,7 +726,7 @@ canvas{display:block;width:100%!important}
                 <th>자막</th>
                 <th>CTR</th>
                 <th>광고비 (원)</th>
-                <th>ROAS</th>
+                <th>광고 ROAS</th>
               </tr>
             </thead>
             <tbody>
@@ -637,19 +739,6 @@ canvas{display:block;width:100%!important}
         </div>
         <!-- CTR 비교 차트 -->
         <div class="chart-box"><div class="chart-title">숏클립 vs 상시 배너 CTR 비교 (%) · 자막 전→후</div><canvas id="chartClipCtr" height="100"></canvas></div>
-        <!-- KPI 하이라이트 -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-          <div style="background:#E6F7EF;border:1px solid rgba(18,183,106,.3);border-radius:8px;padding:8px 10px">
-            <div style="font-size:9px;color:#0C8A52;font-weight:700">최고 CTR · 4/22 숏클립</div>
-            <div style="font-size:22px;font-weight:800;color:#0C8A52;line-height:1.2">11.72%</div>
-            <div style="font-size:9px;color:#0C8A52;margin-top:2px">소이조이 0.76% 대비 <b>+15배</b></div>
-          </div>
-          <div style="background:#E6F7EF;border:1px solid rgba(18,183,106,.3);border-radius:8px;padding:8px 10px">
-            <div style="font-size:9px;color:#0C8A52;font-weight:700">최고 ROAS · 4/22 숏클립</div>
-            <div style="font-size:22px;font-weight:800;color:#0C8A52;line-height:1.2">2,688%</div>
-            <div style="font-size:9px;color:#0C8A52;margin-top:2px">광고비 42,850원 → 직접 매출 1,151,900원</div>
-          </div>
-        </div>
         <!-- 전략 인사이트 -->
         <div class="insight-box info" style="background:rgba(61,90,254,.07);border:1px solid rgba(61,90,254,.2)">
           <div class="ib-title" style="color:#3D5AFE">향후 전략 방향</div>
@@ -671,12 +760,12 @@ canvas{display:block;width:100%!important}
   <div class="slide-inner">
     <div class="reveal" style="display:grid;gap:5px">
       <span class="eyebrow"><span class="dot"></span>CRM &amp; 후속매출</span>
-      <h2 class="headline">알림 전환율 33%, 신규가입 1,100명<br>라방 유입 신규회원 히든쿠폰 발행 계획</h2>
+      <h2 class="headline">알림 전환율 33%, 신규가입 후 구매 2,542명<br>라방 유입 신규회원 히든쿠폰 발행하여 리텐션 유도</h2>
     </div>
     <div class="kpi-grid cols4 reveal d1">
       <div class="kpi-card"><div class="accent-bar" style="background:var(--accent)"></div><div class="kpi-label">라방 알림 수신 (4/15 기준)</div><div class="kpi-val" style="color:var(--accent)">562명</div><div class="kpi-sub" style="color:var(--accent)">알림 발송 기준</div></div>
       <div class="kpi-card"><div class="accent-bar" style="background:var(--success)"></div><div class="kpi-label">구매 전환율</div><div class="kpi-val" style="color:var(--success)">33%</div><div class="kpi-sub" style="color:var(--success)">184명 전환</div></div>
-      <div class="kpi-card"><div class="accent-bar" style="background:var(--success)"></div><div class="kpi-label">키즈 신규가입 (추정)</div><div class="kpi-val" style="color:var(--success)">1,100명</div><div class="kpi-sub" style="color:var(--success)">저번주 기준</div></div>
+      <div class="kpi-card"><div class="accent-bar" style="background:var(--success)"></div><div class="kpi-label">키즈 신규가입 후 구매</div><div class="kpi-val" style="color:var(--success)">2,542명</div><div class="kpi-sub" style="color:var(--success)">라방이후 현재 기준</div></div>
       <div class="kpi-card"><div class="accent-bar" style="background:var(--warning)"></div><div class="kpi-label">신규구매 우수 상품</div><div class="kpi-val" style="font-size:17px;color:var(--warning)">트랙러너<br>제로 베이비</div><div class="kpi-sub" style="color:var(--warning)">공식몰 한정</div></div>
     </div>
     <div class="two-col reveal d2">
@@ -708,8 +797,61 @@ canvas{display:block;width:100%!important}
             </tbody>
           </table>
         </div>
+        <!-- 라이브방송 → 인지 → 후속매출 플로우 카드 -->
+        <div style="background:linear-gradient(135deg,#EEF1FF 0%,#E6F7EF 100%);border:1px solid rgba(61,90,254,.2);border-radius:var(--radius-l);padding:14px 16px">
+          <div style="font-size:11px;font-weight:800;color:var(--text-strong);margin-bottom:12px;display:flex;align-items:center;gap:6px">
+            <span>📡</span> 라이브방송 → 소비자 인지 → 후속매출 연결 구조
+          </div>
+          <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;align-items:center;gap:4px">
+
+            <!-- Step 1 -->
+            <div style="background:#fff;border-radius:var(--radius-m);padding:10px 10px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)">
+              <div style="font-size:18px;margin-bottom:4px">📺</div>
+              <div style="font-size:10px;font-weight:800;color:var(--accent)">라이브방송</div>
+              <div style="font-size:9px;color:var(--text-muted);margin-top:2px;line-height:1.4">제품 노출<br>브랜드 경험</div>
+            </div>
+
+            <!-- Arrow -->
+            <div style="text-align:center;font-size:14px;color:var(--accent);font-weight:700">→</div>
+
+            <!-- Step 2 -->
+            <div style="background:#fff;border-radius:var(--radius-m);padding:10px 10px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)">
+              <div style="font-size:18px;margin-bottom:4px">🧠</div>
+              <div style="font-size:10px;font-weight:800;color:#7C3AED">소비자 인지</div>
+              <div style="font-size:9px;color:var(--text-muted);margin-top:2px;line-height:1.4">검색량 증가<br>재방문 유도</div>
+            </div>
+
+            <!-- Arrow -->
+            <div style="text-align:center;font-size:14px;color:#7C3AED;font-weight:700">→</div>
+
+            <!-- Step 3 -->
+            <div style="background:#fff;border-radius:var(--radius-m);padding:10px 10px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07)">
+              <div style="font-size:18px;margin-bottom:4px">🛒</div>
+              <div style="font-size:10px;font-weight:800;color:#F79009">구매 결정</div>
+              <div style="font-size:9px;color:var(--text-muted);margin-top:2px;line-height:1.4">D+1~15일<br>지속 전환</div>
+            </div>
+
+            <!-- Arrow -->
+            <div style="text-align:center;font-size:14px;color:#F79009;font-weight:700">→</div>
+
+            <!-- Step 4 -->
+            <div style="background:#fff;border-radius:var(--radius-m);padding:10px 10px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07);border:1.5px solid rgba(18,183,106,.4)">
+              <div style="font-size:18px;margin-bottom:4px">📈</div>
+              <div style="font-size:10px;font-weight:800;color:#0C8A52">후속매출</div>
+              <div style="font-size:9px;color:#0C8A52;margin-top:2px;line-height:1.4;font-weight:700">일평균 최대<br>+542% ↑</div>
+            </div>
+
+          </div>
+
+          <!-- 근거 데이터 칩 -->
+          <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+            <div style="background:rgba(108,92,231,.1);border-radius:20px;padding:3px 10px;font-size:9px;font-weight:700;color:#6C5CE7">해리포터 인플 · D+15 후속 1.5억</div>
+            <div style="background:rgba(61,90,254,.1);border-radius:20px;padding:3px 10px;font-size:9px;font-weight:700;color:var(--accent)">플레이위크 1차 · D+13 후속 1.3억</div>
+            <div style="background:rgba(247,144,9,.12);border-radius:20px;padding:3px 10px;font-size:9px;font-weight:700;color:#92400E">플레이위크 2차 샌들 · D+6 일평균 +542%</div>
+            <div style="background:rgba(18,183,106,.1);border-radius:20px;padding:3px 10px;font-size:9px;font-weight:700;color:#0C8A52">전 라방 후속매출 기간 평균 15일 지속</div>
+          </div>
+        </div>
       </div>
-      <!-- 우: CRM -->
       <div style="display:grid;gap:10px">
         <div class="chart-box"><div class="chart-title">CRM 알림 → 전환 퍼널 (4/15 기준)</div><canvas id="chartCrm" height="140"></canvas></div>
         <div class="strat-card" style="border:1.5px solid var(--accent);background:var(--accent-soft)">
@@ -750,8 +892,8 @@ canvas{display:block;width:100%!important}
       <p style="font-size:12.5px;color:var(--text-muted);line-height:1.6">채널 특성에 맞춘 역할 분리 · 자사몰 회원 전환 집중 · 성수기 대량 매출 집중</p>
     </div>
 
-    <!-- 투트랙 2열 -->
-    <div class="reveal d1" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%">
+    <!-- 투트랙 3열 (자사몰전략 + 매출차트 + 네이버전략) -->
+    <div class="reveal d1" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;width:100%">
 
       <!-- ▌자사몰 전략 -->
       <div style="display:flex;flex-direction:column;gap:10px">
@@ -792,6 +934,31 @@ canvas{display:block;width:100%!important}
           </div>
           <div style="font-size:11px;color:var(--text-active);line-height:1.8">
             판매호조 상품을 자사몰 전용으로 제한 <span style="color:#3D5AFE;font-weight:700">→</span> 회원 가입 동기 생성 <span style="color:#3D5AFE;font-weight:700">→</span> 리텐션 기반 구축
+          </div>
+        </div>
+      </div>
+
+      <!-- ▌자사몰 매출 YoY 차트 -->
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:#1A1C1F;border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:17px">📈</span>
+          <span style="font-size:13px;font-weight:700;color:#fff">라방 지속 근거 — 자사몰 매출 추이</span>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:13px 15px;display:flex;flex-direction:column;gap:8px;flex:1">
+          <canvas id="chartStratSales" height="160"></canvas>
+          <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="display:inline-block;width:10px;height:3px;background:#C8CED6;border-radius:1px"></span>25년 실적</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="display:inline-block;width:10px;height:3px;background:#3D5AFE;border-radius:1px"></span>26년 실적</span>
+            <span style="font-size:9px;display:flex;align-items:center;gap:3px"><span style="display:inline-block;width:10px;height:3px;background:#12B76A;border-radius:1px"></span>라방 진행 월</span>
+          </div>
+        </div>
+        <!-- 결론 강조 박스 -->
+        <div style="background:linear-gradient(135deg,#EEF1FF,#E6F7EF);border:1.5px solid #3D5AFE;border-radius:10px;padding:12px 14px;display:grid;gap:6px">
+          <div style="font-size:11px;font-weight:800;color:#1A1C1F">📌 라방 지속 운영이 매출 성장의 핵심</div>
+          <div style="display:grid;gap:4px;font-size:10px;color:var(--text-active);line-height:1.6">
+            <div><span style="color:#3D5AFE;font-weight:700">▲185%</span> 4월 YoY — 라방 4회 집중 운영 효과</div>
+            <div><span style="color:#12B76A;font-weight:700">▲112%</span> 3월 YoY — 피크닉룩 라방 성수기 선점</div>
+            <div style="color:#888;font-size:9px;margin-top:2px">라방 미진행 월(11~1월) 대비 라방 진행 월 평균 +130% YoY</div>
           </div>
         </div>
       </div>
@@ -977,7 +1144,7 @@ Chart.defaults.font.size=11;
 Chart.defaults.color='#888D96';
 const C={accent:'#3D5AFE',success:'#12B76A',danger:'#F04438',warning:'#F79009',muted:'#C8CED6',darkText:'#4D5157'};
 
-new Chart(document.getElementById('chartNaverRoi'),{type:'bar',data:{labels:['1/15\n비수기','2/5\n신학기\n성수기','2/24\n신학기\n성수기','3/19\n어린이날\n성수기','4/8\n어린이날\n성수기','4/23\n어린이날\n성수기'],datasets:[{type:'line',label:'ROI (%)',data:[111,103,125,148,133,144],borderColor:C.accent,backgroundColor:'transparent',pointBackgroundColor:C.accent,pointRadius:5,tension:.3,yAxisID:'y2'},{label:'직접이익 (만원)',data:[688,213,1970,3126,4497,5437],backgroundColor:['#C8CED6','#F79009','#F79009','#12B76A','#3D5AFE','#12B76A'],borderRadius:5,yAxisID:'y'}]},options:{responsive:true,plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false}},scales:{y:{position:'left',ticks:{callback:v=>v.toLocaleString()+'만'},grid:{color:'rgba(0,0,0,.04)'}},y2:{position:'right',min:95,ticks:{callback:v=>v+'%'},grid:{display:false}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('chartNaverRoi'),{type:'bar',data:{labels:['1/15\n비수기','2/5\n신학기\n성수기','2/24\n신학기\n성수기','3/19\n어린이날\n성수기','4/8\n어린이날\n성수기','4/23\n어린이날\n성수기'],datasets:[{type:'line',label:'ROI (%)',data:[111,103,125,148,133,144],borderColor:C.accent,backgroundColor:'transparent',pointBackgroundColor:C.accent,pointRadius:5,tension:.3,yAxisID:'y2'},{label:'직접이익 (만원)',data:[688,213,1970,3126,4497,5437],backgroundColor:['#C8CED6','#F79009','#F79009','#C8CED6','#3D5AFE','#12B76A'],borderRadius:5,yAxisID:'y'}]},options:{responsive:true,plugins:{legend:{position:'top'},tooltip:{mode:'index',intersect:false}},scales:{y:{position:'left',ticks:{callback:v=>v.toLocaleString()+'만'},grid:{color:'rgba(0,0,0,.04)'}},y2:{position:'right',min:95,ticks:{callback:v=>v+'%'},grid:{display:false}},x:{grid:{display:false}}}}});
 
 new Chart(document.getElementById('chartRoi'),{type:'bar',data:{labels:['해리포터 인플','소이조이 인플','토들러','플레이위크 1차','플레이위크 2차'],datasets:[{label:'ROI (%)',data:[108,102,128,132,139],backgroundColor:['#C8CED6','#C8CED6','#C8CED6','#12B76A','#3D5AFE'],borderRadius:5}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'ROI: '+ctx.raw+'%'}}},scales:{y:{min:80,ticks:{callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false},ticks:{font:{size:9}}}}}});
 
@@ -985,15 +1152,38 @@ new Chart(document.getElementById('chartProfit'),{type:'bar',data:{labels:['해�
 
 new Chart(document.getElementById('chartYoy'),{type:'bar',data:{labels:['공식몰','네이버','전체'],datasets:[{label:'25년 (억원)',data:[2.35,1.70,4.05],backgroundColor:'rgba(200,206,214,0.7)',borderRadius:4},{label:'26년 (억원)',data:[5.04,6.46,11.50],backgroundColor:[C.accent,'#12B76A','#7C3AED'],borderRadius:4}]},options:{responsive:true,plugins:{legend:{position:'top'}},scales:{y:{ticks:{callback:v=>v+'억'},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false}}}}});
 
-new Chart(document.getElementById('chartAprilRoas'),{type:'bar',data:{labels:['4/8 네이버','4/15 플레이위크 1차','4/22 플레이위크 2차','4/23 네이버'],datasets:[{label:'광고 ROAS (%)',data:[505,535,250,675],backgroundColor:[C.success,'rgba(61,90,254,.8)',C.warning,'rgba(18,183,106,1)'],borderRadius:5}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'ROAS: '+ctx.raw+'%'}}},scales:{y:{ticks:{callback:v=>v+'%',color:C.darkText},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false},ticks:{color:C.darkText,font:{size:9}}}}}});
+new Chart(document.getElementById('chartAprilRoas'),{type:'bar',data:{labels:['4/8 네이버','4/15 플레이위크 1차','4/22 플레이위크 2차','4/23 네이버'],datasets:[{label:'광고 ROAS (%)',data:[505,535,250,675],backgroundColor:[C.success,'rgba(61,90,254,.8)',C.warning,'rgba(18,183,106,1)'],borderRadius:5}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'광고 ROAS: '+ctx.raw+'%'}}},scales:{y:{ticks:{callback:v=>v+'%',color:C.darkText},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false},ticks:{color:C.darkText,font:{size:9}}}}}});
 
 new Chart(document.getElementById('chartAprilCost'),{type:'bar',data:{labels:['4/8 네이버','4/15 공식몰','4/22 공식몰','4/23 네이버'],datasets:[{label:'광고비 (억)',data:[0.112,0.14,0.048,0.109],backgroundColor:'rgba(248,113,113,0.7)',borderRadius:4},{label:'실매출 (억)',data:[1.432,1.15,0.46,1.329],backgroundColor:['rgba(18,183,106,0.7)','rgba(61,90,254,0.7)','rgba(247,144,9,0.7)','rgba(18,183,106,1)'],borderRadius:4}]},options:{responsive:true,plugins:{legend:{position:'top',labels:{color:C.darkText}}},scales:{y:{ticks:{callback:v=>v+'억',color:C.darkText},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false},ticks:{color:C.darkText,font:{size:9}}}}}});
 
-new Chart(document.getElementById('chartHistory'),{type:'bar',data:{labels:['해리포터인플(25.11)','소이조이인플(26.1)','토들러(26.3)','플레이위크1차(26.4)','플레이위크2차(26.4)'],datasets:[{label:'광고 ROAS (%)',data:[220,91,91,535,250],backgroundColor:['#F79009','#F79009','#C8CED6','#12B76A','#3D5AFE'],borderRadius:5}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'ROAS: '+ctx.raw+'%'}}},scales:{y:{ticks:{callback:v=>v+'%'},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false},ticks:{font:{size:9}}}}}});
+new Chart(document.getElementById('chartHistory'),(()=>{const kw=[44.9,65.3,65.8,55.1,48.0,54.4,37.3,37.3,42.5,50.2,66.4,52.2,50.9,43.9,43.2,55.6,77.4,100.0,93.2,58.4,54.8,50.6,57.2,49.0,52.9,49.8,51.9,52.9,49.4,54.9,52.9,61.9,76.7,69.1,64.5,53.9,52.8,50.2,44.2,41.9,38.3,37.1,40.2,45.5,44.2,39.2,36.8,43.1,28.9,29.1,40.4,38.9,35.3,28.7,30.7,34.1,31.1,31.9,28.9,27.3,25.0,25.1,27.5,28.3,29.7,26.3,28.0,25.2,26.4,21.0,27.9,29.6,28.4,28.2,27.3,29.2,19.8,22.2,29.0,24.7,24.6,26.8,25.8,20.8,25.8,27.6,23.7,33.8,26.9,24.8,20.2,23.5,29.6,28.4,27.4,25.5,32.9,25.6,27.4,33.7,29.7,30.9,31.4,32.0,28.1,29.4,31.4,26.3,28.0,45.8,40.0,39.0,49.0,55.6,45.0,46.1,44.6,40.6,38.7,47.7,59.8,60.8,47.7,51.4,47.2,40.5,43.8,50.2,40.7,41.8,46.0,40.9,40.2,40.4,44.2,42.6,44.3,38.5,47.6,36.1,37.5,47.3,53.8,47.9,46.2,43.3,35.3,42.8,46.3,42.9,39.0,39.4,36.6,36.5,34.9,43.4,43.5,43.0,52.3,36.6,40.7,47.5,55.5,61.7,59.7,85.6,66.0,50.4,55.6,66.7,60.9,59.2,56.9,68.9,56.3,59.6,71.9,67.5];const lb=Array(178).fill('');lb[0]='11월';lb[30]='12월';lb[61]='1월';lb[92]='2월';lb[120]='3월';lb[151]='4월';return{type:'line',data:{labels:lb,datasets:[{data:kw,borderColor:'#6366F1',borderWidth:1.5,pointRadius:0,tension:0.3,fill:true,backgroundColor:'rgba(99,102,241,0.08)'}]},options:{responsive:true,animation:false,plugins:{legend:{display:false},tooltip:{callbacks:{title:c=>{const d=new Date('2025-11-01');d.setDate(d.getDate()+c[0].dataIndex);return d.toLocaleDateString('ko-KR',{month:'short',day:'numeric'})},label:c=>'검색량 '+c.raw}}},scales:{x:{ticks:{color:C.darkText,font:{size:9},maxRotation:0},grid:{display:false}},y:{min:0,max:110,ticks:{color:C.darkText,font:{size:9}},grid:{color:'rgba(0,0,0,.04)'}}}},plugins:[{id:'vlines',afterDraw(chart){const cx=chart.ctx,{top,bottom}=chart.chartArea,mk=[{i:10,c:'#F79009',d:[4,3]},{i:17,c:'#9CA3AF',d:[3,3]},{i:87,c:'#F79009',d:[4,3]},{i:130,c:'#C8CED6',d:[4,3]},{i:165,c:'#12B76A',d:[]},{i:172,c:'#3D5AFE',d:[]}];mk.forEach(m=>{const x=chart.getDatasetMeta(0).data[m.i].x;cx.save();cx.beginPath();cx.strokeStyle=m.c;cx.lineWidth=m.i>=165?2:1.5;cx.setLineDash(m.d);cx.moveTo(x,top);cx.lineTo(x,bottom);cx.stroke();cx.restore()})}}]};})());
+
+new Chart(document.getElementById('chartHistoryRoas'),{type:'bar',data:{labels:['해리포터 인플\n(25.11)','소히조이 인플\n(26.1)','토들러\n(26.3)','플레이위크1차\n(26.4)','플레이위크2차\n(26.4)'],datasets:[{data:[220,91,91,535,250],backgroundColor:['#F79009','#F79009','#C8CED6','#12B76A','#3D5AFE'],borderRadius:4}]},options:{responsive:true,animation:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'광고 ROAS: '+c.raw+'%'}}},scales:{y:{min:0,ticks:{callback:v=>v+'%',color:C.darkText,font:{size:9}},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false},ticks:{color:C.darkText,font:{size:8},maxRotation:0}}}}});
 
 new Chart(document.getElementById('chartClipCtr'),{type:'bar',data:{labels:['소이조이\n(자막❌)','토들러\n(자막❌)','플레이위크1차\n(자막✅)','플레이위크2차\n(자막✅)'],datasets:[{label:'상시 배너 CTR',data:[2.66,2.62,4.28,5.41],backgroundColor:'rgba(200,206,214,0.75)',borderRadius:4},{label:'숏클립 CTR',data:[0.76,2.71,4.97,11.72],backgroundColor:['rgba(248,113,113,0.85)','rgba(248,113,113,0.85)','rgba(18,183,106,0.85)','rgba(18,183,106,1)'],borderRadius:4}]},options:{responsive:true,plugins:{legend:{position:'top',labels:{font:{size:9},color:C.darkText,boxWidth:10}},tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw+'%'}}},scales:{y:{ticks:{callback:v=>v+'%',color:C.darkText,font:{size:9}},grid:{color:'rgba(0,0,0,.04)'}},x:{grid:{display:false},ticks:{color:C.darkText,font:{size:8}}}}}});
 
 new Chart(document.getElementById('chartCrm'),{type:'bar',data:{labels:['알림 발송','실제 수신','구매 전환'],datasets:[{label:'인원 수',data:[800,562,184],backgroundColor:[C.muted,C.accent,C.success],borderRadius:5}]},options:{indexAxis:'y',responsive:true,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.raw+'명'}}},scales:{x:{ticks:{callback:v=>v+'명'},grid:{color:'rgba(0,0,0,.04)'}},y:{grid:{display:false}}}}});
+
+
+
+new Chart(document.getElementById('chartStratSales'),{type:'bar',data:{
+  labels:['11월','12월','1월','2월','3월','4월'],
+  datasets:[
+    {label:'25년 실적',data:[487,256,212,271,307,338],backgroundColor:'rgba(200,206,214,0.65)',borderRadius:4},
+    {label:'26년 실적',data:[461,298,234,281,342,626],
+     backgroundColor:['rgba(200,206,214,0.35)','rgba(200,206,214,0.35)','rgba(200,206,214,0.35)','rgba(61,90,254,0.8)','rgba(18,183,106,0.8)','rgba(18,183,106,1)'],
+     borderRadius:4}
+  ]
+},options:{responsive:true,plugins:{
+  legend:{display:false},
+  tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': '+ctx.raw+'만'}},
+  annotation:{annotations:{
+    line1:{type:'line',xMin:2.5,xMax:2.5,borderColor:'rgba(61,90,254,0.4)',borderWidth:1.5,borderDash:[4,3],label:{content:'라방 시작',enabled:true,font:{size:8},color:'#3D5AFE',position:'start'}}
+  }}
+},scales:{
+  y:{ticks:{callback:v=>v+'만',font:{size:9},color:C.darkText},grid:{color:'rgba(0,0,0,.04)'},title:{display:true,text:'자사몰 매출 (만원)',font:{size:9},color:C.darkText}},
+  x:{grid:{display:false},ticks:{font:{size:9},color:C.darkText}}
+}}});
 </script>
 </body>
 </html>
