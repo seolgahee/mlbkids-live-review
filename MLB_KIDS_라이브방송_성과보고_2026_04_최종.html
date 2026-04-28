@@ -211,11 +211,59 @@ canvas{display:block;width:100%!important}
   .flow-arrow{display:none}
   .action-grid{grid-template-columns:repeat(2,1fr)}
 }
+/* ── Mode Control Panel ──────────────────────────── */
+.mode-ctrl{position:fixed;top:14px;right:14px;z-index:200;display:flex;gap:3px;
+  background:rgba(255,255,255,.93);backdrop-filter:blur(10px);
+  border:1px solid var(--border);border-radius:10px;padding:4px;
+  box-shadow:var(--shadow-soft);transition:background .3s,border-color .3s}
+.mode-btn{width:28px;height:28px;border-radius:6px;border:none;background:transparent;
+  cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;
+  transition:background .15s,color .15s;color:var(--text-primary);font-family:inherit;line-height:1}
+.mode-btn:hover{background:var(--bg-chip)}
+.mode-btn.active{background:var(--accent);color:#fff}
+/* ── Dark Mode ───────────────────────────────────── */
+[data-mode="dark"]{
+  --text-primary:#F0F2F5;--text-strong:#E4E7EB;--text-active:#9BA3AF;
+  --text-muted:#6B7280;--text-disabled:#374151;
+  --border:#252830;--border-strong:#374151;
+  --bg:#111318;--bg-subtle:#1A1C22;--bg-chip:#252830;
+  --brand:#F0F2F5;--accent-soft:#1A2040;
+  --shadow-card:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.5);
+  --shadow-soft:0 1px 2px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.4)
+}
+[data-mode="dark"] body{background:#111318}
+[data-mode="dark"] section.slide{background:var(--bg)!important}
+[data-mode="dark"] .bg-subtle{background:var(--bg-subtle)!important}
+[data-mode="dark"] .kpi-card,[data-mode="dark"] .stat-pill,[data-mode="dark"] .chart-box,
+[data-mode="dark"] .toc-item,[data-mode="dark"] .product-tag,[data-mode="dark"] .flow-step,
+[data-mode="dark"] .strat-card,[data-mode="dark"] .clip-card,[data-mode="dark"] .action-plan
+  {background:#1A1C22!important;border-color:#252830!important}
+[data-mode="dark"] table td{color:var(--text-primary)}
+[data-mode="dark"] table tr:nth-child(even) td{background:#1E2028}
+[data-mode="dark"] table tr:hover td{background:#1A2040}
+[data-mode="dark"] table .roi-row td{background:#0D2218!important;color:#34D399}
+[data-mode="dark"] .key-hint{background:rgba(17,19,24,.93);border-color:#252830}
+[data-mode="dark"] .mode-ctrl{background:rgba(17,19,24,.93);border-color:#252830}
+[data-mode="dark"] .slide-nav button{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.2)}
+[data-mode="dark"] .slide-nav button.active{background:#F0F2F5;border-color:#F0F2F5}
+[data-mode="dark"] .logo-pill{background:rgba(240,242,245,.07);border-color:#252830}
+[data-mode="dark"] .insight-box.pos{background:#0D2218}
+[data-mode="dark"] .insight-box.neg{background:#2A0D0B}
+[data-mode="dark"] .insight-box.info{background:#1A2040}
+[data-mode="dark"] .insight-box.warn{background:#2A1A05}
+[data-mode="dark"] .toc-item{color:var(--text-primary)}
+[data-mode="dark"] .toc-item:hover{border-color:var(--accent)}
+[data-mode="dark"] .img-placeholder{background:var(--bg-subtle);border-color:#374151}
 </style>
 </head>
 <body>
 
 <nav class="slide-nav" id="slideNav"></nav>
+<div class="mode-ctrl" id="modeCtrl">
+  <button class="mode-btn" data-mode="light" title="라이트 모드">&#x2600;</button>
+  <button class="mode-btn" data-mode="dark" title="다크 모드">&#x263E;</button>
+  <button class="mode-btn" id="fsBtn" title="전체화면 (F)">&#x26F6;</button>
+</div>
 <div class="key-hint" id="keyHint">
   <kbd>&#x2191;</kbd><kbd>&#x2193;</kbd> 슬라이드 이동 &nbsp;|&nbsp; <kbd>F</kbd> 전체화면
 </div>
@@ -1138,6 +1186,28 @@ slides.forEach(s=>io.observe(s));
 slides[0].querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
 nav.querySelectorAll('button')[0]?.classList.add('active');
 hintTimer=setTimeout(()=>keyHint.classList.add('hidden'),4000);
+
+// ── Mode Control ──────────────────────────────────
+const modeCtrl=document.getElementById('modeCtrl');
+const fsBtn=document.getElementById('fsBtn');
+function setMode(m){
+  if(m==='dark') document.documentElement.setAttribute('data-mode','dark');
+  else document.documentElement.removeAttribute('data-mode');
+  modeCtrl.querySelectorAll('.mode-btn[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===m));
+  try{localStorage.setItem('reportMode',m);}catch(e){}
+}
+setMode(localStorage.getItem('reportMode')||'light');
+modeCtrl.addEventListener('click',e=>{
+  const b=e.target.closest('.mode-btn');
+  if(!b)return;
+  if(b.dataset.mode) setMode(b.dataset.mode);
+  else document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
+});
+document.addEventListener('fullscreenchange',()=>{
+  const isFull=!!document.fullscreenElement;
+  fsBtn.title=isFull?'전체화면 종료 (F)':'전체화면 (F)';
+  fsBtn.classList.toggle('active',isFull);
+});
 
 Chart.defaults.font.family="'Pretendard','Apple SD Gothic Neo',sans-serif";
 Chart.defaults.font.size=11;
